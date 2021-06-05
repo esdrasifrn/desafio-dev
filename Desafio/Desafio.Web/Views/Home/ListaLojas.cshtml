@@ -1,7 +1,63 @@
-﻿
+﻿@using Desafio.Domain.Entities
+@using System.Globalization
+@using System.Linq;
+
 @{
     ViewData["Title"] = "ListaLojas";
 }
 
-<h1>ListaLojas</h1>
+@model IEnumerable<Loja>
 
+<h1>Operações importadas por Loja</h1>
+
+
+<table>
+    @foreach (var loja in Model)
+    {
+        string corOperacao = "";
+        <thead>
+            <tr>
+                <th colspan="2">Nome da loja</th>
+                <th colspan="2">Dono da loja</th>
+                <th colspan="2">Saldo total</th>
+            </tr>
+        </thead>
+
+        <tr>
+            <td colspan="2">@loja.Nome</td>
+            <td colspan="2">@loja.Dono</td>
+            <td colspan="2">@String.Format(CultureInfo.CreateSpecificCulture("pt-BR"), "{0:C2}", loja.TransacaoItens.Sum(c => c.Valor))</td>
+        </tr>
+
+        <tr>
+            <th class="primeiro">Tipo da transação</th>
+            <th class="primeiro">Data</th>
+            <th class="primeiro">CPF</th>
+            <th class="primeiro">Cartão</th>
+            <th class="primeiro">Hora</th>
+            <th class="primeiro">Valor</th>
+        </tr>
+        foreach (var itemTransacao in loja.TransacaoItens)
+        {
+
+            <tbody>
+                <tr>
+                    @if (itemTransacao.TipoTransacao.Sinal == "+")
+                    {
+                        corOperacao = "#0088BB !important";
+                    }
+                    else
+                    {
+                        corOperacao = "#FF000A !important";
+                    }
+                    <td style="background-color:@corOperacao">@itemTransacao.TipoTransacao.Sinal @itemTransacao.TipoTransacao.Descricao</td>
+                    <td>@String.Format(CultureInfo.CreateSpecificCulture("pt-BR"), "{0:dd/MM/yyyy}", itemTransacao.Data)</td>
+                    <td>@itemTransacao.CpfBeneficiario</td>
+                    <td>@itemTransacao.Cartao</td>
+                    <td>@String.Format(CultureInfo.CreateSpecificCulture("pt-BR"), "{0:hh:mm:dd}", itemTransacao.Hora)</td>
+                    <td>@String.Format(CultureInfo.CreateSpecificCulture("pt-BR"), "{0:C2}", itemTransacao.Valor)</td>
+                </tr>
+            </tbody>
+        }
+    }
+</table>
