@@ -1,28 +1,15 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Desafio.Domain.Interfaces.Repository;
-using Desafio.Domain.Interfaces.Services;
-using Desafio.Domain.Services;
 using Desafio.Infra.Data;
-using Desafio.Infra.Http;
-using Desafio.Infra.Interfaces;
-using Desafio.Infra.RepositoryEF;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 using SDK.DependencyInjection;
 using SDK.DependencyInjection.AutoFac;
 using SDK.DependencyInjection.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Desafio.Web
 {
