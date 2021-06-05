@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Infra", "Desafio.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.DependencyInjection", "SDK.DependencyInjection\SDK.DependencyInjection.csproj", "{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Application", "Desafio.Application\Desafio.Application.csproj", "{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{D7D03980-EC32-43A0-8F82-92D7ED28DD07} = {E3E930C1-372A-477E-AFA2-861623568B68}
 		{313290F9-B8DC-45E2-AF6B-635B6DF47269} = {41456BE9-BFB3-4974-87E1-22FAB852CE67}
 		{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F} = {65FDBACF-3C0B-4C6B-B5A9-1F1DF41C6ACC}
+		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74} = {AE7B4679-D22F-489E-8A36-BE55E25D122E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68FFFD21-6F5B-484B-82AE-CFFFD64B13F3}
