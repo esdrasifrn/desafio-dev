@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>dc9dd002-41c5-4d67-a04f-1b1161c42fe4</ProjectGuid>
+    <ProjectGuid>5aa5b4f9-22c2-40aa-b0fa-d544329d1cad</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>desafio.web</DockerServiceName>

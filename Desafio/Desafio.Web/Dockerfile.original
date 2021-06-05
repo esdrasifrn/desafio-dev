@@ -7,10 +7,6 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["Desafio.Web/Desafio.Web.csproj", "Desafio.Web/"]
-COPY ["Desafio.Application/Desafio.Application.csproj", "Desafio.Application/"]
-COPY ["Desafio.Domain/Desafio.Domain.csproj", "Desafio.Domain/"]
-COPY ["Desafio.Infra/Desafio.Infra.csproj", "Desafio.Infra/"]
-COPY ["SDK.DependencyInjection/SDK.DependencyInjection.csproj", "SDK.DependencyInjection/"]
 RUN dotnet restore "Desafio.Web/Desafio.Web.csproj"
 COPY . .
 WORKDIR "/src/Desafio.Web"

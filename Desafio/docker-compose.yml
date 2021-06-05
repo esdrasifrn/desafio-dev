@@ -5,7 +5,7 @@ services:
     image: ${DOCKER_REGISTRY-}desafioweb
     depends_on:
     - desafio.api
-    - sqldata
+    - sqlserver
     ports:
     - "20000:80"
     networks:
@@ -17,7 +17,7 @@ services:
   desafio.api:
     image: ${DOCKER_REGISTRY-}desafioapi  
     depends_on:   
-    - sqldata
+    - sqlserver
     ports:
     - "20001:80"
     networks:
@@ -26,7 +26,7 @@ services:
      context: .
      dockerfile: Desafio.API/Dockerfile
 
-  sqldata:
+  sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
     networks:
       - desafio-network
@@ -34,7 +34,7 @@ services:
       - SA_PASSWORD=Admin1q2w3e@
       - ACCEPT_EULA=Y
     ports:
-      - "1450:1433"
+      - "1451:1433"
  
 
 networks:
