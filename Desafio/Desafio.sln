@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.DependencyInjection", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Application", "Desafio.Application\Desafio.Application.csproj", "{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.API", "Desafio.API\Desafio.API.csproj", "{D592A458-2480-4AB5-BFF5-2440FBE2D856}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D592A458-2480-4AB5-BFF5-2440FBE2D856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D592A458-2480-4AB5-BFF5-2440FBE2D856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D592A458-2480-4AB5-BFF5-2440FBE2D856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D592A458-2480-4AB5-BFF5-2440FBE2D856}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{313290F9-B8DC-45E2-AF6B-635B6DF47269} = {41456BE9-BFB3-4974-87E1-22FAB852CE67}
 		{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F} = {65FDBACF-3C0B-4C6B-B5A9-1F1DF41C6ACC}
 		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74} = {AE7B4679-D22F-489E-8A36-BE55E25D122E}
+		{D592A458-2480-4AB5-BFF5-2440FBE2D856} = {4A3F2AAF-7E66-4112-8620-AE1B2F384773}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68FFFD21-6F5B-484B-82AE-CFFFD64B13F3}
