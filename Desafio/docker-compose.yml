@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  desafio.web:
+    image: ${DOCKER_REGISTRY-}desafioweb
+    build:
+      context: .
+      dockerfile: Desafio.Web/Dockerfile
