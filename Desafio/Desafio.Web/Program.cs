@@ -1,5 +1,9 @@
+using Autofac.Extensions.DependencyInjection;
+using Desafio.Infra.Data;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -14,13 +18,14 @@ namespace Desafio.Web
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-        }
+        }       
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+          Host.CreateDefaultBuilder(args)
+          .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+              .ConfigureWebHostDefaults(webBuilder =>
+              {
+                  webBuilder.UseStartup<Startup>();                 
+              });
     }
 }
