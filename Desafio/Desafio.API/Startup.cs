@@ -13,6 +13,7 @@ using SDK.DependencyInjection.AutoFac;
 using SDK.DependencyInjection.Interfaces;
 using System;
 using System.IO;
+using System.Reflection;
 using System.Text.Json;
 
 namespace Desafio.API
@@ -40,23 +41,29 @@ namespace Desafio.API
 
             #endregion          
 
-            services.AddSwaggerGen(c => {
+            //services.AddSwaggerGen(c => {
 
-                c.SwaggerDoc("v1",
-                    new OpenApiInfo
-                    {
-                        Title = "Desafio",
-                        Version = "v1",
-                        Description = "API genérica",
-                        Contact = new OpenApiContact
-                        {
-                            Name = "ByCoders",
-                            Url = new Uri("mailto:esdras.valetim@yahoo.com.br")
-                        }
-                    });
+            //    c.SwaggerDoc("v1",
+            //        new OpenApiInfo
+            //        {
+            //            Title = "Desafio",
+            //            Version = "v1",
+            //            Description = "API genérica",
+            //            Contact = new OpenApiContact
+            //            {
+            //                Name = "ByCoders",
+            //                Url = new Uri("mailto:esdras.valetim@yahoo.com.br")
+            //            }
+            //        });    
+            //});
 
-                //var filePath = Path.Combine(System.AppContext.BaseDirectory, "MyApi.xml");
-                //c.IncludeXmlComments(filePath);
+            services.AddSwaggerGen(opt =>
+            {
+                opt.SwaggerDoc("v1", new OpenApiInfo { Title = "DesafioAPI", Version = "v1" });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                opt.IncludeXmlComments(xmlPath);
             });
 
 

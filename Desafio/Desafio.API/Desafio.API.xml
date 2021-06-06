@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Desafio.API</name>
+    </assembly>
+    <members>
+        <member name="M:Desafio.API.Controllers.DesafioController.UploadArquivoCNAB(System.String)">
+            <summary>
+            Recebe um arquivo CNAB em base64 
+            </summary>
+            <param name="arquivoBase64">Deve ser passado uma string de um arquivo CNAB no formato base64</param>
+            <returns>Retorna o resultado do processamento (sucesso ou não)</returns>
+        </member>
+    </members>
+</doc>
