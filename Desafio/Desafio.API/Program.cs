@@ -22,7 +22,8 @@ namespace Desafio.API
           .UseServiceProviderFactory(new AutofacServiceProviderFactory())
               .ConfigureWebHostDefaults(webBuilder =>
               {
-                  webBuilder.UseStartup<Startup>();
+                  webBuilder.UseStartup<Startup>();                  
               });
+        
     }
 }
