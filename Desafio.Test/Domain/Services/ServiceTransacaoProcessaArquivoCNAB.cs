@@ -1,11 +1,8 @@
 ﻿using Desafio.Domain.Services;
-using Desafio.Test.Factories;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Desafio.Test.Domain.Factories;
 using Xunit;
 
-namespace Desafio.Test.Services
+namespace Desafio.Test.Domain.Services
 {
     public class ServiceTransacaoProcessaArquivoCNAB
     {

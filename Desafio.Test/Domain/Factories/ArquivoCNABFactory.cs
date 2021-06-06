@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
-namespace Desafio.Test.Factories
+namespace Desafio.Test.Domain.Factories
 {
     public class ArquivoCNABFactory
     {

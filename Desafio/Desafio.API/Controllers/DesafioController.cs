@@ -1,12 +1,10 @@
-﻿using Desafio.API.Model;
+﻿using Desafio.API.Helpers;
+using Desafio.API.Model;
 using Desafio.Domain.Interfaces.Services;
 using Desafio.Infra.Helpers;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -26,26 +24,39 @@ namespace Desafio.API.Controllers
             return ApiResult.New(success, message, ex);
         }
 
+        /// <summary>
+        /// Recebe um arquivo CNAB em base64 
+        /// </summary>
+        /// <param name="arquivoBase64">uma string de um arquivo CNAB no formato base64</param>
+        /// <returns></returns>
         [Route("~/api/file"), HttpPost]
-        public async Task<ApiResult> UploadArquivoCNAB([FromBody] string arquivoCNAB)
+        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(bool), (int)HttpStatusCode.BadRequest)]
+        public async Task<ActionResult<ApiResult>> UploadArquivoCNAB([FromBody] string arquivoBase64)
         {
             try
             {
-                var options = new JsonSerializerOptions
+                var arquivoCnab = Util.NormalizeFormat(arquivoBase64);
+
+                if ((arquivoBase64 is null) || (!Util.IsBase64String(arquivoBase64)))
+                    return BadRequest(arquivoCnab);
+
+                var response = JsonSerializer.Deserialize<FileUploadModel>(arquivoCnab, new JsonSerializerOptions
                 {
                     PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                };
+                });
 
-                var response = JsonSerializer.Deserialize<FileUploadModel>(arquivoCNAB, options);
-               
-                 _serviceTransacao.ProcessaSalvamento(response.ToStream());
-
-                return Result(true, "Arquivo processado com sucesso.");
+                if (_serviceTransacao.ProcessaSalvamento(response.ToStream()).Count > 1)
+                    return Ok(Result(true, "Arquivo processado com sucesso."));
             }
+
             catch (Exception ex)
             {
-                return Result(false, "Ocorreu um erro ao processar o arquivo: Erro:" + ex.Message);                
-            }           
+                return Result(false, "Ocorreu um erro ao processar o arquivo: Erro:" + ex.Message, null);
+            }
+
+            return BadRequest();
         }
     }
 }

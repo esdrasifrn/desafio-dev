@@ -7,18 +7,9 @@ using Desafio.Web.Helpers;
 using Desafio.Web.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Desafio.Web.Controllers
@@ -64,7 +55,7 @@ namespace Desafio.Web.Controllers
             }
             else
             {
-                return View();
+                return View("Home");
             }
 
         }     

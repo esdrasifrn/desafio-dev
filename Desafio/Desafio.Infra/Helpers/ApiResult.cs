@@ -7,7 +7,7 @@ namespace Desafio.Infra.Helpers
   public class ApiResult
     {
         public bool Success { get; set; }
-        public string Message { get; set; }
+        public string Message { get; set; }      
 
         public static ApiResult New(bool success, string message, Exception ex = null)
         {

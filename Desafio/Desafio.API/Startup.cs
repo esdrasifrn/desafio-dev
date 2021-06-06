@@ -12,6 +12,7 @@ using SDK.DependencyInjection;
 using SDK.DependencyInjection.AutoFac;
 using SDK.DependencyInjection.Interfaces;
 using System;
+using System.IO;
 using System.Text.Json;
 
 namespace Desafio.API
@@ -37,16 +38,7 @@ namespace Desafio.API
                        options => options.UseSqlServer(
                            Configuration.GetConnectionString("DesafioConnectionString")));
 
-
-            //services.AddDbContext<DesafioContext>(options =>
-            //   options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            #endregion
-
-            services.AddControllers()
-                .AddJsonOptions(options =>
-                {
-                    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
-                });
+            #endregion          
 
             services.AddSwaggerGen(c => {
 
@@ -62,6 +54,9 @@ namespace Desafio.API
                             Url = new Uri("mailto:esdras.valetim@yahoo.com.br")
                         }
                     });
+
+                //var filePath = Path.Combine(System.AppContext.BaseDirectory, "MyApi.xml");
+                //c.IncludeXmlComments(filePath);
             });
 
 

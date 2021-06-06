@@ -5,9 +5,7 @@ using Desafio.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace Desafio.Domain.Services
 {
