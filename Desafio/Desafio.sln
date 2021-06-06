@@ -17,19 +17,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - DependencyInjection", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 - Application", "07 - Application", "{AE7B4679-D22F-489E-8A36-BE55E25D122E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Domain", "Desafio.Domain\Desafio.Domain.csproj", "{D7D03980-EC32-43A0-8F82-92D7ED28DD07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Domain", "Desafio.Domain\Desafio.Domain.csproj", "{D7D03980-EC32-43A0-8F82-92D7ED28DD07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Infra", "Desafio.Infra\Desafio.Infra.csproj", "{313290F9-B8DC-45E2-AF6B-635B6DF47269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Infra", "Desafio.Infra\Desafio.Infra.csproj", "{313290F9-B8DC-45E2-AF6B-635B6DF47269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK.DependencyInjection", "SDK.DependencyInjection\SDK.DependencyInjection.csproj", "{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SDK.DependencyInjection", "SDK.DependencyInjection\SDK.DependencyInjection.csproj", "{6C9E6A83-6F86-4D22-ABF2-F3E2B56D589F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Application", "Desafio.Application\Desafio.Application.csproj", "{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Application", "Desafio.Application\Desafio.Application.csproj", "{9CFC9AAB-7269-4537-A7EC-51D7A3636E74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.API", "Desafio.API\Desafio.API.csproj", "{D592A458-2480-4AB5-BFF5-2440FBE2D856}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.API", "Desafio.API\Desafio.API.csproj", "{D592A458-2480-4AB5-BFF5-2440FBE2D856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Web", "Desafio.Web\Desafio.Web.csproj", "{86AB90B2-BD87-4D3A-8EC1-8EA4F817FC99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Desafio.Web", "Desafio.Web\Desafio.Web.csproj", "{86AB90B2-BD87-4D3A-8EC1-8EA4F817FC99}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5AA5B4F9-22C2-40AA-B0FA-D544329D1CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Test", "..\Desafio.Test\Desafio.Test.csproj", "{BEEB6433-E466-4365-9A6E-45AF8A123A9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{5AA5B4F9-22C2-40AA-B0FA-D544329D1CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA5B4F9-22C2-40AA-B0FA-D544329D1CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA5B4F9-22C2-40AA-B0FA-D544329D1CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEEB6433-E466-4365-9A6E-45AF8A123A9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEEB6433-E466-4365-9A6E-45AF8A123A9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEEB6433-E466-4365-9A6E-45AF8A123A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEEB6433-E466-4365-9A6E-45AF8A123A9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{9CFC9AAB-7269-4537-A7EC-51D7A3636E74} = {AE7B4679-D22F-489E-8A36-BE55E25D122E}
 		{D592A458-2480-4AB5-BFF5-2440FBE2D856} = {4A3F2AAF-7E66-4112-8620-AE1B2F384773}
 		{86AB90B2-BD87-4D3A-8EC1-8EA4F817FC99} = {6D17D8D7-BCCA-4F55-B274-873D151881F2}
+		{BEEB6433-E466-4365-9A6E-45AF8A123A9A} = {4D496B90-71AB-4700-857A-7D0AFAF73F48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68FFFD21-6F5B-484B-82AE-CFFFD64B13F3}

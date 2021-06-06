@@ -27,6 +27,11 @@ namespace Desafio.Domain.Services
             _lojaRepository = lojaRepository;
         }
 
+        public ServiceTransacao()
+        {
+                
+        }
+
         #region Métodos genéricos da classe
         public TransacaoItem Salvar(TransacaoItem entity)
         {
@@ -134,7 +139,7 @@ namespace Desafio.Domain.Services
             return listaLojas;
         }
 
-        private List<TransacaoDTO> ProcessaArquivoCNAB(Stream arquivo)
+        public List<TransacaoDTO> ProcessaArquivoCNAB(Stream arquivo)
         {
             List<string> linhas = new List<string>();
             List<TransacaoDTO> ListaTransacaoDTO = new List<TransacaoDTO>();
