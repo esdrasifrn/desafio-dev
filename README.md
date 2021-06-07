@@ -16,7 +16,7 @@ Padrões utilizados
 
 Explicação dos módulos/pastas
 - 01 - API: Resposável pelas APIs do projeto
-- 02 - UI: Contém a interface do usuário para enexar e enviar o arquivo CNAB
+- 02 - UI: Contém a interface do usuário para anexar e enviar o arquivo CNAB
 - 03 - Domain: Todas as regras de negócio
 - 04 - Infra: Implementações concretas do repositório do domínio(Nesse caso, utilizando o EF), classes auxiliares para envio HTTP
 - 05 - Testes unitários, utilizando o Xunit
